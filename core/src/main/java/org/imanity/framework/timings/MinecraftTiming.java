@@ -1,4 +1,4 @@
-package co.aikar.timings.lib;
+package org.imanity.framework.timings;
 
 import co.aikar.timings.Timing;
 import co.aikar.timings.Timings;

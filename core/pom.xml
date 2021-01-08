@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>bukkit-timings</artifactId>
+        <groupId>org.imanity.framework.timings</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>core</artifactId>
+
+    <name>ImanityFramework-Timings</name>
+
+    <description>Fork from aikar's minecraft-timings, using Framework Service feature</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>imanity-libraries</id>
+            <url>https://maven.imanity.dev/repository/imanity-libraries/</url>
+        </snapshotRepository>
+        <repository>
+            <id>imanity-libraries</id>
+            <url>https://maven.imanity.dev/repository/imanity-libraries/</url>
+        </repository>
+    </distributionManagement>
+
+    <build>
+        <defaultGoal>clean install</defaultGoal>
+        <finalName>${project.artifactId}</finalName>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.2</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <showDeprecation>false</showDeprecation>
+                    <showWarnings>false</showWarnings>
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>19.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.imanity.framework</groupId>
+            <artifactId>core-common</artifactId>
+            <version>${version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.imanity.framework.timings</groupId>
+            <artifactId>interface</artifactId>
+            <version>${version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.imanity.framework.timings</groupId>
+            <artifactId>impl_1.7</artifactId>
+            <version>${version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.imanity.spigot</groupId>
+            <artifactId>spigot</artifactId>
+            <version>1.8.8-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+</project>

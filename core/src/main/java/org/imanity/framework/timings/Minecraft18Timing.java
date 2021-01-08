@@ -1,4 +1,4 @@
-package co.aikar.timings.lib;
+package org.imanity.framework.timings;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;

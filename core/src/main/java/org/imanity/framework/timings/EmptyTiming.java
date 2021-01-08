@@ -1,4 +1,4 @@
-package co.aikar.timings.lib;
+package org.imanity.framework.timings;
 
 
 class EmptyTiming extends MCTiming {

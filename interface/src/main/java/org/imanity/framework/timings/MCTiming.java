@@ -1,4 +1,4 @@
-package co.aikar.timings.lib;
+package org.imanity.framework.timings;
 
 abstract public class MCTiming implements AutoCloseable {
     public abstract MCTiming startTiming();
